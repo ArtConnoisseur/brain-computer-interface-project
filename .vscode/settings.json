@@ -9,7 +9,7 @@
   "python-envs.pythonProjects": [
     {
       "path": "server",
-      "envManager": "ms-python.python:system",
+      "envManager": "ms-python.python:venv",
       "packageManager": "ms-python.python:pip"
     }
   ]

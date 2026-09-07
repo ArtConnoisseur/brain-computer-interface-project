@@ -1,5 +1,8 @@
 # =============================================
 
+# Copyright (c) 2026 Rudraksh Srivastava
+# SPDX-License-Identifier: AGPL 3.0
+
 # This file is part of Rudraksh Srivastava's
 # Final Year Project at the University
 # of Edinburgh.
@@ -18,6 +21,10 @@ import numpy as np
 
 
 class EEGPreprocessing:
+    """
+    This class implements the main preprocessing pipeline 
+    utility functions. 
+    """
     def __init__(self):
         self.base_data_path = r"eeg-data/reannotated/"
         self.save_data_path = r"eeg-data/processed/"
@@ -156,6 +163,12 @@ class EEGPreprocessing:
 
 
 class EEGTransforms:
+    """
+    This class contains functions mainly to apply the
+    various frequency transforms. It precomputes and stores
+    the transformed data specifically for the multimodal data.
+    """
+
     def __init__(self):
         self.root_dir = r"eeg-data/processed"
         self.freq_dir = r"eeg-data/processed_fft"
@@ -175,7 +188,7 @@ class EEGTransforms:
     def process_all_files(self):
         for patient in range(1, 110):
             for trial in range(3, 15):
-                src_path  = self._get_patient_filepath(patient, trial)
+                src_path = self._get_patient_filepath(patient, trial)
                 freq_path = self._get_save_filepath(self.freq_dir, patient, trial)
                 imag_path = self._get_save_filepath(self.imag_dir, patient, trial)
 

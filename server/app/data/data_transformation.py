@@ -1,5 +1,8 @@
 # =============================================
 
+# Copyright (c) 2026 Rudraksh Srivastava
+# SPDX-License-Identifier: AGPL 3.0
+
 # This file is part of Rudraksh Srivastava's
 # Final Year Project at the University
 # of Edinburgh.
@@ -15,9 +18,6 @@
 
 # =============================================
 
-
-# ============ Import Statements ==============
-
 import os
 
 import h5py
@@ -26,9 +26,6 @@ import numpy as np
 from natsort import natsorted
 from pyedflib import highlevel
 
-# =============================================
-
-# =============================================
 
 
 class DataTransformer:
@@ -146,12 +143,6 @@ class DataTransformer:
 
         for patient in self.patient_files[1:]:
             self.compute_new_annotations(patient=patient)
-
-
-
-
-
-# =============================================
 
 if __name__ == "__main__":
     dt = DataTransformer(data_directory="eeg-data")

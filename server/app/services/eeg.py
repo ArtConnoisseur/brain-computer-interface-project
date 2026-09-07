@@ -1,3 +1,11 @@
+"""
+This is a ground up redesign of the script provided
+by the team behind the PiEEG-16, aimed at modularising 
+the task and making the API compatible with modern
+Python standards and this backend application.
+"""
+
+
 import spidev
 import gpiod
 

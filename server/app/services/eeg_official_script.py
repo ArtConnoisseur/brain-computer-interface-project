@@ -1,3 +1,12 @@
+"""
+This is the official script provided to drive and work
+with the interface provided by the PiEEG-16 team. 
+
+This is not compatible with a FastAPI application and is 
+therefore now deprecated. 
+"""
+
+
 import spidev
 import time
 #from RPi import GPIO
