@@ -54,11 +54,16 @@ https://doi.org/10.48550/arXiv.2409.07491)</sup>. PiEEG-16 is an effort to provi
 
 > [!NOTE]
 >
-> Disclaimer: Please do note that this is a demonstration repository, the BCI itself can only run with the [PiEEG-16](#pieeg-16) device. For convenience, I've bound <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd> and <kbd>D</kbd> to simulate the *Up, Down, Left and Right* inputs. Additionally, this project was entirely coded by me and this codebase was maintained by me, so I've really only catered to my needs and not what someone using my app might need. This is because the focus was the cross-attention model and making something novel, not the demonstration interface, as such I can imagine you might face some difficulties getting this interface running. Please do not hesitate to contact me to help set this up for you! See my profile to reach out, I look forward to hearing from anyone that might be interested in talking about this project!
+> Please do note that this is a demonstration repository, the BCI itself can only run with the [PiEEG-16](#pieeg-16) device. For convenience, I've bound <kbd>W</kbd>, <kbd>A</kbd>, <kbd>S</kbd> and <kbd>D</kbd> to simulate the *Up, Down, Left and Right* inputs. Additionally, this project was entirely coded by me and this codebase was maintained by me, so I've really only catered to my needs and not what someone using my app might need. This is because the focus was the cross-attention model and making something novel, not the demonstration interface, as such I can imagine you might face some difficulties getting this interface running. Please do not hesitate to contact me to help set this up for you! See my profile to reach out, I look forward to hearing from anyone that might be interested in talking about this project!
+
+### Deployment 
+
+Update: As I've stated, while you are not connected to the PiEEG-16 device, which will be the case for most people, you are unable to run the interface as designed. To enable for you to use it, the interface is redesigned to work with sample inputs (see [here note above for more info](#how-to-run-the-interface)). This bit has been [deployed on Vercel](https://brain-computer-interface-project-epxy3mxm8.vercel.app/) for convenient use. Please note this has been done as of 2026, I will probably not maintain this if you're looking at this years after the fact.
+
 
 > [!TIP]
 >
->Prerequisite: Install [`node.js`](https://nodejs.org/en). You will also need Python, I recommend using `uv` for this which you can [read about and install from here](https://docs.astral.sh/uv/). You need to have `git` installed. Follow the instructions [from the official `git` website](https://git-scm.com/install/).  
+>Prerequisites: Install [`node.js`](https://nodejs.org/en). You will also need Python, I recommend using `uv` for this which you can [read about and install from here](https://docs.astral.sh/uv/). You need to have `git` installed. Follow the instructions [from the official `git` website](https://git-scm.com/install/).  
 
 The repository follows a standard monorepo project structure, the frontend is made using VueJS and that is contained by the client directory and the backend contains all the ML models and the communication-to-the-frontend driver code.
 
@@ -82,7 +87,7 @@ uv run fastapi run main.py
 
 > [!CAUTION]
 >
-> Disclaimer: To run it on the PiEEG device, it required access to your network for webhook communication, as this was mainly a demo and a POC. Please reach out to me directly or to the corresponding author on the publication for assistance with this matter.
+> Disclaimer: To run it on the PiEEG device, it required access to your network for webhook communication, as this was mainly a demo and a POC. Please reach out to me directly via my profile or the corresponding author on the [publication](#publication) for assistance with setting this up.
 
 ## The PyTorch Modules 
 
